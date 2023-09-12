@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
+
 const EventCard = (props) => {
 
     return (

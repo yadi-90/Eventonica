@@ -64,16 +64,7 @@ app.delete('/api/events/edit', async (req, res) =>{
         console.log(error);
     }
 })
-app.update('/events/add', async (req, res) =>{
-    try{
-        const { id } = req.params;
-        const { rows } = await db.query('UPDATE events SET title = $1, location = $2 WHERE id = $3', [req.body.title, req.body.location, id]);
-        res.json(`Event ${id} updated successfully`);
-    } catch(error){
-        console.log(error);
-    }
-}
-)
+
 
 
 app.listen(PORT, () => console.log(`Hola! Server running on Port http://localhost:${PORT}`));
