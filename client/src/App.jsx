@@ -1,21 +1,28 @@
 import './App.css';
 import Events from './components/events';
 import Navbar from './components/navbar';
+import SearchBox from './components/searchbox';
+import EventCard from './components/event';
+
 
 function App() {
   return (
     <>
     <div className="navbar">
       <Navbar /> </div>
-      <div className="App">
-    <h1>Eventonica App</h1>
-    <div className="App-header">
+      <div className="Title">
+    <h1>Event Managment</h1>
+    </div>
+    <div className="container">
+    <div className="Events">
+      <SearchBox /></div>
+      </div>
+    <div className="App">
   <Events />
   </div>
-  </div>
+  <EventCard />
 </>
-  )
-  
+  ); 
 }
 
 export default App
