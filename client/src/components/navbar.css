@@ -22,12 +22,3 @@
 .navbar a:hover{
     color: #eabc32;
 }
-
-.container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(203, 219, 219);
-}

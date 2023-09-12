@@ -13,10 +13,8 @@ function App() {
       <div className="Title">
     <h1>Event Managment</h1>
     </div>
-    <div className="container">
     <div className="Events">
       <SearchBox /></div>
-      </div>
     <div className="App">
   <Events />
   </div>

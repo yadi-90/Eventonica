@@ -2,15 +2,15 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    background: #00556e;
+    justify-content: space-between;
 }
 .searchbar{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
     background: rgba(225, 34, 34, 0.5);
     border-radius: 40px;
 }
@@ -21,7 +21,6 @@
     line-height: 1;
     font-size: 18px;
     color: #00556e;
-    padding: 24 20px;
 }
 ::placeholder{
     color: #00556e;
@@ -30,4 +29,14 @@
 .searchbar button img{
     width: 20px;
     height: 20px;
+}
+
+.heart{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    margin-right: 20px;
+    color:white;
 }
