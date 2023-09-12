@@ -6,7 +6,8 @@ const SearchBox = () => {
         <div className="container">
             <form action="" className="search">
             <input type="text" placeholder="Search by name/date"></input>
-            <button type="submit"><img src="images/search.png" height="20px" ></img></button></form>
+            <button type="submit"><img src="images/search.png" height="20px" ></img></button>
+            </form>
         </div>
 
     )
