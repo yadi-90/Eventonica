@@ -27,7 +27,7 @@ app.get('/api/events', async (req, res) =>{
     //real connection with the DB eventonica
     try{
         const { rows: events } = await db.query('SELECT * FROM events');
-        console.log("In the Server", events);
+        console.log("In the server", events)
         res.send(events);
 
     } catch(error){
@@ -36,35 +36,35 @@ app.get('/api/events', async (req, res) =>{
 
     }
 
-    //hardcode the events response for testing reasons. This call has one more event that the real DB 
-    // try{
-    //     const events = [
-
-    //         {id: 1, title: 'Women in Tech Techtonica Panel', location: 'Overland Park Convention Center'},
-    //         {id: 2, title: 'Japanese Cultural Education', location: 'Seattle Convention Center'},
-    //         {id: 3, title: "Haven 90's Party Night Club", location: 'Hilton Hotel Kansas City'},
-    //         {id: 4, title: 'Comedy Night at the Station', location: 'SF Hilton Hotel'},
-    //         {id: 5, title: 'A Decadent Arts Experience', location: 'West Ridge Mall'},
-    //         {id: 6, title: 'Techtonica Classroom Course', location: 'Techtonica HQ'}
-    //       ];
-    //     res.json(events);
-
-    // } catch(error){
-    //     console.log(error);
-    // }   
-    
 })
 
-app.delete('/api/events/edit', async (req, res) =>{
-    try{
-        const { id } = req.params;
-        const { rows } = await db.query('DELETE FROM events WHERE id = $1', [id]);
-        res.json(`Event ${id} deleted successfully`);
+app.post('/api/events', async (req, res) =>{
+    /*
+    INSERT INTO events (title, location, eventtime) VALUES ('Women in Tech Techtonica Panel', 'Overland Park Convention Center', '2023-04-21');
+    */
+
+    try {
+        // const userData = req.body;
+        // console.log("In the server", userData);
+        const { title, location, eventtime } = req.body;
+        // syntax = await db.query("", [])
+        const result = await db.query(
+        "INSERT INTO events (title, location, eventtime) VALUES ($1, $2, $3) RETURNING *",
+            [title, location, eventtime]
+        );
+        let dbResponse = result.rows[0];
+        console.log(dbResponse)
+        res.json(dbResponse);
     } catch(error){
         console.log(error);
+        res.status(400).json({error});
     }
 })
 
+
+// app.delete('/api/events/:id', async (req, res) =>{
+//     //TODO - make this delete request work
+// }
 
 
 app.listen(PORT, () => console.log(`Hola! Server running on Port http://localhost:${PORT}`));
