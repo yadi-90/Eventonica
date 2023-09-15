@@ -38,7 +38,7 @@ const EventCard = (props) => {
                 <Card.Text>
                     Location: {props.event.location}
                 </Card.Text>
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleDelete}><img src="images/trash-bin.png" alt="trashbin" height="30px" weight="30px"></img></button>
                 <button>Edit</button>
             </Card.Body>
         </Card>
