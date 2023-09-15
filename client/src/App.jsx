@@ -11,6 +11,7 @@ function App() {
     <div className="navbar">
       <Navbar /> </div>
       <div className="Title">
+        <img src="images/eventonica logo.png" height="400px" width="400px"></img>
     <h1>Event Managment</h1>
     </div>
     <div className="Events">
