@@ -3,6 +3,7 @@ import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; 
 import moment from 'moment';
 
+
 const EventCard = (props) => {
 
     const handleDelete = () => {
@@ -39,7 +40,7 @@ const EventCard = (props) => {
                     Location: {props.event.location}
                 </Card.Text>
                 <button onClick={handleDelete}><img src="images/trash-bin.png" alt="trashbin" height="30px" weight="30px"></img></button>
-                <button>Edit</button>
+                <button ><img src="images/pencil.png" alt="editingbutton" height="30px" weight="30px"></img></button>
             </Card.Body>
         </Card>
     )

@@ -76,6 +76,20 @@ app.delete('/api/events/:id', async (req, res) =>{
     }
 })
 
+// app.put('/api/events/:id/favorite', async (req, res) =>{
+//   try{
+//     const eventId = req.params.id;
+//     const updateOperation = await db.query("UPDATE events SET favorite = true WHERE id=$1", [eventId]);
+//     console.log(updateOperation);
+//     res.status(200).end()
+
+//     }
+//     catch(error){
+//         console.log(error);
+//         res.status(400).json({error});
+//     }
+    
+
 //UPDATING something in the DB
 // app.put('/api/events/:id', async (req, res) =>{
 
