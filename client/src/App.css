@@ -2,7 +2,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 175px;
 }
 
 .Events {
@@ -11,9 +11,15 @@
 
 h1 {
   color: #00556e;
-  margin-bottom: 50px !important;
+  font-size: 50px;
 }
 
 form{
   margin-top: 50px;
 }
+
+.Title{
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
